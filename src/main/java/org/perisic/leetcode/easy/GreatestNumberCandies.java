@@ -1,13 +1,16 @@
-    package org.perisic.leetcode.easy;
-    
-    public class GreatestNumberCandies {
-    
+package org.perisic.leetcode.easy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GreatestNumberCandies {
+
     /**
      * https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
      */
 
     public static void main(String[] args) {
-    
+
         int[] candies1 = new int[]{2, 3, 5, 1, 3};
         int extraCandies1 = 3;
         int[] candies2 = new int[]{4, 2, 1, 1, 2};
@@ -22,7 +25,7 @@
 
 
     private static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-    
+
         int greatestNumber = greatestNumber(candies);
 
         List<Boolean> resultList = new ArrayList<>();
@@ -33,8 +36,7 @@
         return resultList;
     }
 
-    private static int greatestNumber(int[] nums)
-    {
+    private static int greatestNumber(int[] nums) {
         int result = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > result) {
